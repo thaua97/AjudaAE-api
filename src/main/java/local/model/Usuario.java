@@ -1,9 +1,6 @@
 package local.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -14,6 +11,8 @@ import org.hibernate.validator.constraints.br.CPF;
 public class Usuario {
 
     @Id
+    @ManyToOne
+    @JoinColumn(name="chamado_id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 

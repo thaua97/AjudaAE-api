@@ -46,6 +46,10 @@ public class Chamado {
     @JoinColumn(name="cliente_id")
     private Cliente cliente;
 
+    @OneToMany
+    @JoinColumn(name="funcionario_id")
+    private Funcionario funcionario;
+
     public int getId() {
         return id;
     }
@@ -132,6 +136,13 @@ public class Chamado {
 
     public Cliente getCliente() { return cliente; }
 
+    public void setCliente(Funcionario funcionario) {
+        this.funcionario = funcionario;
+    }
+
+    public Funcionario getFuncionario() { return funcionario; }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -147,12 +158,14 @@ public class Chamado {
                 Objects.equals(email3, chamado.email3) &&
                 Objects.equals(telefone, chamado.telefone) &&
                 Objects.equals(telefone2, chamado.telefone2)&&
-                Objects.equals(cliente, chamado.cliente);
+                Objects.equals(cliente, chamado.cliente)&&
+                Objects.equals(funcionario, chamado.funcionario);
+
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(id, titulo, descricao, tipo, status, email, email2, email3, telefone, telefone2, cliente);
+        return Objects.hash(id, titulo, descricao, tipo, status, email, email2, email3, telefone, telefone2, cliente, funcionario);
     }
 }
