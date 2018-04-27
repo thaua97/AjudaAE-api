@@ -2,10 +2,8 @@ package local.model;
 
 import javax.persistence.Entity;
 
-import local.model.GenericModel;
-
 @Entity
-public class Funcionario extends GenericModel {
+public class Funcionario extends Usuario{
 
 private boolean ativo;
 	
