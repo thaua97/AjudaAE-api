@@ -11,8 +11,6 @@ import org.hibernate.validator.constraints.br.CPF;
 public class Usuario {
 
     @Id
-    @ManyToOne
-    @JoinColumn(name="chamado_id")
     @GeneratedValue(strategy=GenerationType.AUTO)
     private int id;
 
