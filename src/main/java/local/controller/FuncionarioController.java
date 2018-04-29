@@ -43,12 +43,12 @@ public class FuncionarioController {
 	
 	}
 	
-	@GetMapping("/buscar/{id}")
+	@GetMapping("/{id}")
 	public Funcionario buscar(@PathVariable int id) {
 		return funcionarioDAO.findById(id).get();
 	}
 	
-	@PutMapping("/editar/{id}")
+	@PutMapping("/{id}")
 	public Funcionario Editar (@PathVariable(value = "id") int fuId, 
 							   @Valid @RequestBody Funcionario func) {
 		
@@ -63,7 +63,7 @@ public class FuncionarioController {
 	}
 	
 	
-	@DeleteMapping("/remover/{id}")
+	@DeleteMapping("/{id}")
 	public void remover(@PathVariable int id) {
 		Funcionario fu = funcionarioDAO.findById(id).get();
 		funcionarioDAO.delete(fu);
