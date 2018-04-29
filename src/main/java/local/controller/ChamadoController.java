@@ -32,12 +32,12 @@ public class ChamadoController {
 
     }
 
-    @GetMapping("/buscar/{id}")
+    @GetMapping("/{id}")
     public Chamado buscar(@PathVariable int id){
         return chamadoDAO.findById(id).get();
     }
 
-    @PutMapping("/editar/{id}")
+    @PutMapping("/{id}")
     public Chamado editar(@PathVariable(value = "id") int chId, @Valid @RequestBody Chamado chs){
 
         Chamado ch = chamadoDAO.findById(chId).get();
@@ -56,7 +56,7 @@ public class ChamadoController {
 
     }
 
-    @DeleteMapping("/remover/{id}")
+    @DeleteMapping("/{id}")
     public void remover(@PathVariable int id){
         Chamado ch = chamadoDAO.findById(id).get();
         chamadoDAO.delete(ch);
