@@ -30,12 +30,12 @@ public class ClienteController {
         return new ResponseEntity<Cliente>(cl, HttpStatus.CREATED);
     }
 
-    @GetMapping("/buscar/{id}")
+    @GetMapping("/{id}")
     public Cliente buscar(@PathVariable int id){
         return clienteDAO.findById(id).get();
     }
 
-    @PutMapping("/editar/{id}")
+    @PutMapping("/{id}")
     public Cliente editar(@PathVariable(value = "id") int clId, @Valid @RequestBody Cliente cli){
 
         Cliente cl = clienteDAO.findById(clId).get();
@@ -48,7 +48,7 @@ public class ClienteController {
         return editarCliente;
     }
 
-    @DeleteMapping("/remover/{id}")
+    @DeleteMapping("/{id}")
     public void remover(@PathVariable int id){
       Cliente cl = clienteDAO.findById(id).get();
                    clienteDAO.delete(cl);
