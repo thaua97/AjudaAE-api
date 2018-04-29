@@ -20,13 +20,14 @@ As rotas estão seguindo a especificação rest, realizando as operções básic
 * /clientes <code>GET</code>
 * /clientes <code>POST</code>
 * /clientes/{id} <code>GET</code>
+* /clientes/{id} <code>PUT</code>
 * /clientes/{id} <code>DELETE</code>
 
 ### Chamados
 
-
 * /chamado <code>GET</code>
 * /chamado <code>POST</code>
+* /chamado/{id} <code>PUT</code>
 * /chamado/{id} <code>GET</code>
 * /chamado/{id} <code>DELETE</code>
 
@@ -35,5 +36,6 @@ As rotas estão seguindo a especificação rest, realizando as operções básic
 
 * /funcionarios <code>GET</code>
 * /funcionarios <code>POST</code>
+* /funcionarios/{id} <code>PUT</code>
 * /funcionarios/{id} <code>GET</code>
 * /funcionarios/{id} <code>DELETE</code>
