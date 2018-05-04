@@ -41,7 +41,9 @@ public class Chamado {
     private String telefone;
 
     private String telefone2;
-    
+
+    @OneToMany(mappedBy = "Chamado", fetch = FetchType.LAZY)
+    private String funcionario;
 
     public int getId() {
         return id;
