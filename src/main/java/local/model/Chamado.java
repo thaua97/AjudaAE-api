@@ -42,6 +42,9 @@ public class Chamado {
 
     private String telefone2;
     
+    @OneToMany(mappedBy = "Chamado", fetch = FetchType.LAZY)
+    
+    
 
     public int getId() {
         return id;
