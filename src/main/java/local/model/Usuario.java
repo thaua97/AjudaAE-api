@@ -15,12 +15,15 @@ public class Usuario {
     private int id;
 
     @NotNull(message="O campo nome não pode ser nulo.")
-    @Size(min=4, max=30)
+    @Size(min=4, max=60)
     private String nome;
 
     @Email
     @NotNull(message="O campo E-mail não pode ser nulo.")
     private String email;
+
+    @NotNull
+    private String senha;
 
     @CPF
     @NotNull(message="O campo CPF não pode ser nulo.")
@@ -29,6 +32,7 @@ public class Usuario {
     @NotNull(message="O campo Endereço não pode ser nulo.")
     @Size(min=12, max=80)
     private String endereco;
+
 
     public int getId() {
         return id;
@@ -52,6 +56,14 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getSenha() {
+        return senha;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
     }
 
     public String getCpf() {
@@ -79,6 +91,7 @@ public class Usuario {
         result = prime * result + ((endereco == null) ? 0 : endereco.hashCode());
         result = prime * result + id;
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
+        result = prime * result + ((senha == null) ? 0 : senha.hashCode());
         return result;
     }
 
@@ -100,6 +113,11 @@ public class Usuario {
             if (other.email != null)
                 return false;
         } else if (!email.equals(other.email))
+            return false;
+        if (senha == null) {
+            if (other.senha != null)
+                return false;
+        } else if (!senha.equals(other.senha))
             return false;
         if (endereco == null) {
             if (other.endereco != null)
