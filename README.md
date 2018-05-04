@@ -1,5 +1,4 @@
-[![Build Status](https://travis-ci.org/thaua97/AjudaAE-api.svg?branch=master)](https://travis-ci.org/thaua97/AjudaAE-api)
-
+[![Build Status](https://travis-ci.org/thaua97/AjudaAE-api.svg?branch=Develop)](https://travis-ci.org/thaua97/AjudaAE-api)
 # AjudaAE - API
 Projeto da disciplina de Algoritimos 3 que consiste em, um sistema de abertura e visualização de chamados tecnicos, para empressas 
 do ramo de assistencia tecnica em Hardwares e softwares.
