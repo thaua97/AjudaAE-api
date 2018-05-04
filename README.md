@@ -11,6 +11,23 @@ do ramo de assistencia tecnica em Hardwares e softwares.
 * MySQL
 * Flyway
 * Security
+* Json Web Token
+
+## Branchs
+* <code>Master  </code>
+
+    <small> Branch padrão da aplicação, onde o codigo fonte presente nela, sera o mesmo no ambiente de produção.</small>
+    
+
+
+* <code>Develop</code>
+
+    <small>Branch onde a aplicação sera desenvolvida e testada.</small>
+
+* <code>Auth</code>
+
+    <small>Branch responsavel pelo desenvolvimento e testes da autenticação.</small>
+
 
 ## Rotas
 As rotas estão seguindo a especificação rest, realizando as operções básicas para um CRUD:
