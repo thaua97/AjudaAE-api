@@ -68,21 +68,5 @@ public class FuncionarioController {
 		Funcionario fu = funcionarioDAO.findById(id).get();
 		funcionarioDAO.delete(fu);
 	}
-	
-	@PostConstruct
-	public void seed() {	
-		Funcionario fu1 = new Funcionario();
-			fu1.setNome("Thaua Borges");
-			fu1.setEmail("thaua97@gmail.com");
-			fu1.setCpf("042.777.610-46");
-			fu1.setEndereco("Rua alameda sete, n°7, bloco 7");		
-		Funcionario fu2 = new Funcionario();	
-			fu2.setNome("Lucas Edvald");
-			fu2.setEmail("ludivald399@gmail.com");
-			fu2.setCpf("023.520.860-43");
-			fu2.setEndereco("Rua Visconde da Graça");
-			
-			funcionarioDAO.saveAll(Arrays.asList(fu1,fu2));
-	}
-	
+
 }
