@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS 'Funcionario' (
+CREATE TABLE IF NOT EXISTS 'funcionario' (
     'id' integer (20) NOT NULL,
     'nome' varchar (60) NOT NULL,
     'senha' varchar (20) NOT NULL
