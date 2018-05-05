@@ -1,15 +1,8 @@
 CREATE TABLE funcionario (
-    id integer (11) NOT NULL,
-    nome varchar (60) NOT NULL,
-    senha varchar (20) NOT NULL,
-    email varchar (120) NOT NULL,
-    cpf varchar (14) NOT NULL,
-    endereco varchar (80) NOT NULL
-
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
-ALTER TABLE funcionario
-  ADD PRIMARY KEY (id);
-
-ALTER TABLE funcionario
-  MODIFY id integer(11) NOT NULL AUTO_INCREMENT;
+    id INT (11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR (60) NOT NULL,
+    senha VARCHAR (20) NOT NULL,
+    email VARCHAR (120) NOT NULL UNIQUE,
+    cpf VARCHAR (14) NOT NULL,
+    endereco VARCHAR (80) NOT NULL,
+);
