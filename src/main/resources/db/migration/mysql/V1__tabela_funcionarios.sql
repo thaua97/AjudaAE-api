@@ -4,5 +4,5 @@ CREATE TABLE funcionario (
     senha VARCHAR (20) NOT NULL,
     email VARCHAR (120) NOT NULL UNIQUE,
     cpf VARCHAR (14) NOT NULL,
-    endereco VARCHAR (80) NOT NULL,
+    endereco VARCHAR (80) NOT NULL
 );
