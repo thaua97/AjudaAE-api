@@ -24,7 +24,6 @@ public class Chamado {
     @NotNull(message="Selecione um tipo")
     private String tipo;
 
-    private String funcionario;
 
     @NotNull
     private String status;
@@ -44,10 +43,6 @@ public class Chamado {
 
     private String telefone2;
 
-    @OneToMany(mappedBy = "chamado", fetch = FetchType.LAZY)
-    private String getFuncionario(){
-        return funcionario;
-    }
 
     public int getId() {
         return id;
